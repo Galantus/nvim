@@ -379,46 +379,42 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+require('config/plugins/indentline')
+time([[Config for indent-blankline.nvim]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 require('config/plugins/trouble')
 time([[Config for trouble.nvim]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-require('config/plugins/gitsigns')
-time([[Config for gitsigns.nvim]], false)
--- Config for: nvim-dap-ui
-time([[Config for nvim-dap-ui]], true)
-require('config/plugins/debug')
-time([[Config for nvim-dap-ui]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
 require('config/plugins/alpha')
 time([[Config for alpha-nvim]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-require('config/plugins/toggleterm')
-time([[Config for toggleterm.nvim]], false)
--- Config for: sniprun
-time([[Config for sniprun]], true)
-require('config/plugins/sniprun')
-time([[Config for sniprun]], false)
--- Config for: textobj-diagnostic.nvim
-time([[Config for textobj-diagnostic.nvim]], true)
-require('config/plugins/diagnostic')
-time([[Config for textobj-diagnostic.nvim]], false)
 -- Config for: nvim-lspconfig
 time([[Config for nvim-lspconfig]], true)
 require('config/lsp')
 time([[Config for nvim-lspconfig]], false)
--- Config for: focus.nvim
-time([[Config for focus.nvim]], true)
-require('config/plugins/windows')
-time([[Config for focus.nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require('config/plugins/telescope')
-time([[Config for telescope.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+require('config/plugins/lualine')
+time([[Config for lualine.nvim]], false)
+-- Config for: nvim-neoclip.lua
+time([[Config for nvim-neoclip.lua]], true)
+require('config/plugins/neoclip')
+time([[Config for nvim-neoclip.lua]], false)
+-- Config for: cmp-tabnine
+time([[Config for cmp-tabnine]], true)
+require('config/plugins/cmp_tN')
+time([[Config for cmp-tabnine]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+require('config/plugins/whichkey')
+time([[Config for which-key.nvim]], false)
+-- Config for: spellsitter.nvim
+time([[Config for spellsitter.nvim]], true)
+require('config/plugins/spellchecker')
+time([[Config for spellsitter.nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 require('config/plugins/nvim-tree') 
@@ -427,66 +423,70 @@ time([[Config for nvim-tree.lua]], false)
 time([[Config for code_runner.nvim]], true)
 require('config/plugins/code_runner')
 time([[Config for code_runner.nvim]], false)
+-- Config for: sniprun
+time([[Config for sniprun]], true)
+require('config/plugins/sniprun')
+time([[Config for sniprun]], false)
+-- Config for: focus.nvim
+time([[Config for focus.nvim]], true)
+require('config/plugins/windows')
+time([[Config for focus.nvim]], false)
 -- Config for: symbols-outline.nvim
 time([[Config for symbols-outline.nvim]], true)
 require('config/plugins/outline')
 time([[Config for symbols-outline.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require('config/plugins/treesitter')
-time([[Config for nvim-treesitter]], false)
--- Config for: cmp-tabnine
-time([[Config for cmp-tabnine]], true)
-require('config/plugins/cmp_tN')
-time([[Config for cmp-tabnine]], false)
--- Config for: nvim-neoclip.lua
-time([[Config for nvim-neoclip.lua]], true)
-require('config/plugins/neoclip')
-time([[Config for nvim-neoclip.lua]], false)
+-- Config for: nvim-dap-ui
+time([[Config for nvim-dap-ui]], true)
+require('config/plugins/debug')
+time([[Config for nvim-dap-ui]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 require('config/plugins/cmp')
 time([[Config for nvim-cmp]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-require('config/plugins/lualine')
-time([[Config for lualine.nvim]], false)
--- Config for: spellsitter.nvim
-time([[Config for spellsitter.nvim]], true)
-require('config/plugins/spellchecker')
-time([[Config for spellsitter.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require('config/plugins/telescope')
+time([[Config for telescope.nvim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 require('config/plugins/comment')
 time([[Config for Comment.nvim]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-require('config/plugins/whichkey')
-time([[Config for which-key.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require('config/plugins/autopairs')
-time([[Config for nvim-autopairs]], false)
--- Config for: project.nvim
-time([[Config for project.nvim]], true)
-require('config/plugins/project')
-time([[Config for project.nvim]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
-require('config/plugins/indentline')
-time([[Config for indent-blankline.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+require('config/plugins/gitsigns')
+time([[Config for gitsigns.nvim]], false)
+-- Config for: textobj-diagnostic.nvim
+time([[Config for textobj-diagnostic.nvim]], true)
+require('config/plugins/diagnostic')
+time([[Config for textobj-diagnostic.nvim]], false)
 -- Config for: nvim-colorizer.lua
 time([[Config for nvim-colorizer.lua]], true)
 require('config/plugins/colorizer')
 time([[Config for nvim-colorizer.lua]], false)
--- Config for: hlargs.nvim
-time([[Config for hlargs.nvim]], true)
-require('config/plugins/hlargs')
-time([[Config for hlargs.nvim]], false)
 -- Config for: bufferline.nvim
 time([[Config for bufferline.nvim]], true)
 require('config/plugins/bufferline')
 time([[Config for bufferline.nvim]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+require('config/plugins/toggleterm')
+time([[Config for toggleterm.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require('config/plugins/treesitter')
+time([[Config for nvim-treesitter]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require('config/plugins/autopairs')
+time([[Config for nvim-autopairs]], false)
+-- Config for: hlargs.nvim
+time([[Config for hlargs.nvim]], true)
+require('config/plugins/hlargs')
+time([[Config for hlargs.nvim]], false)
+-- Config for: project.nvim
+time([[Config for project.nvim]], true)
+require('config/plugins/project')
+time([[Config for project.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
