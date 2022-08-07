@@ -8,8 +8,6 @@ local lspconfig = require("lspconfig")
 local servers = {
     "jsonls",
     "sumneko_lua",
- --  "pyright",
-  --  "pylsp",
     "jedi_language_server",
     "emmet_ls",
     "esbonio",
@@ -23,7 +21,6 @@ local servers = {
     "ltex",
     "marksman",
     "rust_analyzer",
---    "sourcery",
     "sqls",
     "bashls",
 }
