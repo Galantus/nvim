@@ -28,7 +28,7 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return "fucking vim"
+	return "Neovim = <3"
 end
 
 dashboard.section.footer.val = footer()

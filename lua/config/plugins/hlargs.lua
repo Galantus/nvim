@@ -1,4 +1,9 @@
-require('hlargs').setup({
+local status_ok, hlargs = pcall(require, "hlargs")
+if not status_ok then
+	return
+end
+
+hlargs.setup({
   color = '#ef9062',
   highlight = {},
   excluded_filetypes = {},

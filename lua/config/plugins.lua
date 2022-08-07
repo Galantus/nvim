@@ -69,9 +69,11 @@ return packer.startup(function(use)
 -- Which-key
 	use({"folke/which-key.nvim",
         config = [[require('config/plugins/whichkey')]] })
+
 -- Window manager
     use ({ "beauwilliams/focus.nvim",
         config = [[require('config/plugins/windows')]]})
+
 -- toggleterm
 	use({ "akinsho/toggleterm.nvim",
         tag = 'v2.*',
@@ -91,6 +93,7 @@ return packer.startup(function(use)
     use({"folke/tokyonight.nvim"})
     use({"navarasu/onedark.nvim"})
     use({"nxvu699134/vn-night.nvim"})
+    use({"EdenEast/nightfox.nvim"})
 
 -- cmp plugins
 	use({ "hrsh7th/nvim-cmp",
@@ -104,7 +107,6 @@ return packer.startup(function(use)
         run='./install.sh',
         requires = 'hrsh7th/nvim-cmp',
         config = [[require('config/plugins/cmp_tN')]] }
-
 
 -- Notify
     use({"rcarriga/nvim-notify"})
@@ -127,17 +129,25 @@ return packer.startup(function(use)
         config =[[require('config/plugins/outline')]]})
     use { "folke/trouble.nvim",
               config = [[require('config/plugins/trouble')]]}
+
 -- Telescope
 	use({ "nvim-telescope/telescope.nvim",
         config = [[require('config/plugins/telescope')]] })
 
 -- Treesitter
-	use({ "nvim-treesitter/nvim-treesitter",
+	use({"nvim-treesitter/nvim-treesitter",
         config = [[require('config/plugins/treesitter')]] })
     use({"p00f/nvim-ts-rainbow"})
-    use ({'JoosepAlviste/nvim-ts-context-commentstring'})
-    use { 'm-demare/hlargs.nvim',
-        config = [[require('config/plugins/hlargs')]]}
+    use({'JoosepAlviste/nvim-ts-context-commentstring'})
+    use({'RRethy/nvim-treesitter-textsubjects'})
+    use({'m-demare/hlargs.nvim',
+        config = [[require('config/plugins/hlargs')]]})
+    use({"folke/twilight.nvim",
+        config = [[require('config/plugins/twilight')]]})
+    -- Scope in func
+    use({"SmiteshP/nvim-gps",
+        config = [[require('config/plugins/gps')]]})
+
 -- Git
 	use({ "lewis6991/gitsigns.nvim",
         config = [[require('config/plugins/gitsigns')]] })
@@ -181,6 +191,9 @@ return packer.startup(function(use)
 -- Diagnostics
     use({ "andrewferrier/textobj-diagnostic.nvim",
         config = [[require('config/plugins/diagnostic')]] })
+
+
+
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins

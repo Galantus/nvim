@@ -1,4 +1,9 @@
-require("focus").setup({
+local status_ok, focus = pcall(require, "focus")
+if not status_ok then
+  return
+end
+
+focus.setup({
     enable = true,  --enable this plugin
     autoresize = false, --The focussed window will no longer automatically resize
     --excluded_filetypes = {},

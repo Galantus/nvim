@@ -1,5 +1,9 @@
+local status_ok, nvimtree = pcall(require, "nvim-tree")
+if not status_ok then
+  return
+end
 
-require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
+nvimtree.setup { -- BEGIN_DEFAULT_OPTS
       create_in_closed_folder = false,
         auto_reload_on_write = true,
       disable_netrw = false,
@@ -38,9 +42,9 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       renderer = {
         add_trailing = false,
         group_empty = false,
-        highlight_git = false,
+        highlight_git = true,
         full_name = false,
-        highlight_opened_files = "none",
+        highlight_opened_files = "all",
         root_folder_modifier = ":~",
         indent_markers = {
           enable = false,
@@ -54,7 +58,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
         },
         icons = {
           webdev_colors = true,
-          git_placement = "before",
+          git_placement = "after",
           padding = " ",
           symlink_arrow = " ➛ ",
           show = {
@@ -108,7 +112,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       diagnostics = {
         enable = true,
         show_on_dirs = false,
-        debounce_delay = 50,
+        debounce_delay = 500,
         icons = {
           hint = "",
           info = "",
@@ -123,7 +127,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       },
       filesystem_watchers = {
         enable = true,
-        debounce_delay = 50,
+        debounce_delay = 500,
       },
       git = {
         enable = true,
@@ -135,7 +139,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
         use_system_clipboard = true,
         change_dir = {
           enable = true,
-          global = false,
+          global = true,
           restrict_above_cwd = false,
         },
         expand_all = {
