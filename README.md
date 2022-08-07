@@ -4,7 +4,7 @@
 [github reference](https://github.com/LunarVim/Neovim-from-scratch)
 
 ## To do:
-1. add dap configs 
-2. create installer(uninstaller) in bash(zsh)
-3. add lsp configs
-4. rework whichkey conf
+- [ ] add dap configs 
+- [ ] create installer(uninstaller) in bash(zsh)
+- [ ] add lsp configs
+- [ ] rework whichkey conf
