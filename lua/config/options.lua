@@ -35,7 +35,6 @@ local options = {
   guifont = "hack:h18",               -- the font used in graphical neovim applications
   langmap = {"ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ",
              "фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"},  -- add russian keyboard support in normal mode TODO add support for all keyboard
-    
 }
 
 vim.opt.shortmess:append "c"
@@ -44,6 +43,7 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
+vim.wo.fillchars='eob: ' -- fill empty characters with "" and not with "~"
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work

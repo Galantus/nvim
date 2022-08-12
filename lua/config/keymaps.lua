@@ -40,7 +40,7 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
@@ -60,6 +60,11 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
+-- save file with ctrl-s
+keymap("n", "", ":w<cr>", opts)
+
+-- EXTERNAL KEYMAPS with plugins
+
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
@@ -70,3 +75,4 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "<F1>", ":TroubleToggle <cr>", opts)
 keymap("n", "<F2>", ":SymbolsOutline <cr>", opts)
 keymap("n", "<F3>", ":NvimTreeToggle <cr>", opts)
+keymap("n", "<F4>", ":TodoLocList <cr>", opts)

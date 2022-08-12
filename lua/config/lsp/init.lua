@@ -3,8 +3,9 @@ if not status_ok then
   return
 end
 
-require("config.lsp.configs")
+require("config.lsp.mason")
+require("config.lsp.lspconfig")
 require("config.lsp.handlers").setup()
 require("config.lsp.null-ls")
 require("lsp-format").setup {}
-require "lspconfig".gopls.setup { on_attach = require "lsp-format".on_attach }
+--require "lspconfig".gopls.setup { on_attach = require "lsp-format".on_attach }
