@@ -100,6 +100,7 @@ local mappings_n = {
     ["8"] = { "<cmd>lua require('bufferline').go_to_buffer(8, true)<cr>", "window 8" },
     ["9"] = { "<cmd>lua require('bufferline').go_to_buffer(9, true)<cr>", "window 9" },
     ["0"] = {},
+    ["$"] = {},
     ["-"] = {},
     ["+"] = {},
     ["a"] = { name = "Addons",
@@ -107,7 +108,6 @@ local mappings_n = {
         t = { "<cmd>CmpTabnineHub<cr>}", "TabNine Hub" },
         c = { "<cmd>ClolorizerToggle<cr>", "Colorizer" },
         n = { "<cmd>Neogen<cr>", "Neogen" }
-
     },
     ["b"] = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
         "Buffers", },
@@ -115,7 +115,11 @@ local mappings_n = {
         name = "Comments",
         l = { "<cmd>lua require('nvim-comment-frame').add_comment()<CR>", "single line" },
         m = { "<cmd>lua require('nvim-comment-frame').add_multiline_comment()<CR>", "multi line" },
-        v = { ":'<,'>CommentToggle<cr>", "visual"}
+        v = { ":'<,'>CommentToggle<cr>", "visual" },
+        f = { "<cmd>lua require('neogen').generate({ type = 'func'})<CR>", "gen func" },
+        s = { "<cmd>lua require('neogen').generate({ type = 'class' })<CR>", "gen class" },
+        t = { "<cmd>lua require('neogen').generate({ type = 'type' })<CR>", "gen type" },
+        F = { "<cmd>lua require('neogen').generate({ type = 'file' })<CR>", "gen file" }
     },
     ["d"] = {
         name = "Debug",
@@ -227,12 +231,14 @@ local mappings_n = {
         name = "Search",
         b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
         c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+        C = { "<cmd>Telescope commands<cr>", "Commands" },
         h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
+        ["+"] = {":lua require('telescope').extensions.neoclip.default()<cr>", "clipboard +"},
+        m = { ":lua require('telescope').extensions.macroscope.default()<cr>", "Macros"},
         M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
         r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
         R = { "<cmd>Telescope registers<cr>", "Registers" },
         k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
-        C = { "<cmd>Telescope commands<cr>", "Commands" },
     },
 
     m = {
@@ -247,12 +253,6 @@ local mappings_n = {
         r = { '<cmd>TermExec cmd="python3 %"<cr>', "Run Python3 File" },
         c = { '<cmd>TermExec dir="%:p"<cr>', "in current dir" },
         b = { '<cmd>TermExec cmd="./%"<cr>', "bash file" }
-    },
-    n = {
-        name = "Neogen",
-        f = { "<cmd>lua require('neogen').generate({type='func'})<CR>", "gen func" },
-        s = { "<cmd>lua require('neogen').generate({ type = 'class' })<CR>", "gen class" },
-        t = { "<cmd>lua require('neogen').generate({ type = 'type' })<CR>", "gen type" }
     },
     q = {
         name = "Quit",
