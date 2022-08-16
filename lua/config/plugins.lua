@@ -103,9 +103,13 @@ return packer.startup(function(use)
     -- cmp plugins
     use({ "hrsh7th/nvim-cmp",
         config = [[require('config/plugins/cmp')]] })
+    use({"petertriho/cmp-git",
+        config = [[require('config/plugins/cmp_git')]]})
     use({ "hrsh7th/cmp-buffer" })
     use({ "hrsh7th/cmp-path" })
     use({ "saadparwaiz1/cmp_luasnip" })
+    use({"f3fora/cmp-spell" })
+    use({ "lukas-reineke/cmp-rg"})
     use({ "hrsh7th/cmp-nvim-lsp" })
     use({ "hrsh7th/cmp-nvim-lua" })
     use { 'tzachar/cmp-tabnine',
