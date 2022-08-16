@@ -106,8 +106,9 @@ local mappings_n = {
     ["a"] = { name = "Addons",
         a = { "<cmd>Alpha<cr>", "Dashboard" },
         t = { "<cmd>CmpTabnineHub<cr>}", "TabNine Hub" },
-        c = { "<cmd>ClolorizerToggle<cr>", "Colorizer" },
-        n = { "<cmd>Neogen<cr>", "Neogen" }
+        c = { "<cmd>ColorizerToggle<cr>", "Colorizer" },
+        n = { "<cmd>Neogen<cr>", "Neogen" },
+        f = { "<cmd>FocusToggle<cr>", "FocusToggle"}
     },
     ["b"] = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
         "Buffers", },

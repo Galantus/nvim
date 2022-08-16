@@ -2,10 +2,6 @@ local status_ok, bufferline = pcall(require, "bufferline")
 if not status_ok then
   return
 end
---ing `gui`, `guifg`, `guibg`, `guisp` is deprecated please, convert these as follows: 
--- guifg -> fg
--- guibg -> bg
--- guisp -> sp
 bufferline.setup {
   options = {
     numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
@@ -36,7 +32,7 @@ bufferline.setup {
     -- end,
     max_name_length = 25,
     max_prefix_length = 30, -- prefix used when a buffer is de-duplicated
-    tab_size = 21,
+    tab_size = 20,
     diagnostics = "nvim_lsp", -- | "nvim_lsp" | "coc",
     diagnostics_update_in_insert = true,
     -- diagnostics_indicator = function(count, level, diagnostics_dict, context)
