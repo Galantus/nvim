@@ -75,6 +75,15 @@ return packer.startup(function(use)
         tag = 'v2.*',
         config = [[require('config/plugins/toggleterm')]] })
 
+    -- Test Coverage
+    use({'andythigpen/nvim-coverage',
+        config = [[require('config/plugins/testcoverage')]]})
+
+    -- Tests
+    use ({ "nvim-neotest/neotest",
+        requires = { "antoinemadec/FixCursorHold.nvim" },
+        config = [[require('config/plugins/neotest')]]})
+
     -- Filemanager
     use({ 'kyazdani42/nvim-tree.lua',
         requires = { 'kyazdani42/nvim-web-devicons' }, -- optional, for file icons

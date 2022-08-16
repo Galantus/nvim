@@ -131,9 +131,15 @@ local mappings_n = {
     },
     ["t"] = {
         name = "Tests",
-        s = { "<cmd>lua require('dap-python').debug_selection()<cr>", "debug_selection" },
+        v = { "<cmd>lua require('dap-python').debug_selection()<cr>", "debug selection" },
         m = { "<cmd>lua require('dap-python').test_method()<cr>", "test method" },
         c = { "<cmd>lua require('dap-python').test_class()<cr>", "test class" },
+        r = { '<cmd>lua require("neotest").run.run()<cr>', "run nearest" },
+        f = { '<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<cr>', "run current file" },
+        d = { '<cmd>lua require("neotest").run.run({strategy = "dap"})<cr>', "run with dap" },
+        s = { '<cmd>lua require("neotest").run.stop()<cr>', "stop tests" },
+        a = { '<cmd>lua require("neotest").run.attach()<cr>', "attach tests" }
+
     },
     ["e"] = {
         name = "Explorer",
@@ -233,8 +239,8 @@ local mappings_n = {
         c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
         C = { "<cmd>Telescope commands<cr>", "Commands" },
         h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
-        ["+"] = {":lua require('telescope').extensions.neoclip.default()<cr>", "clipboard +"},
-        m = { ":lua require('telescope').extensions.macroscope.default()<cr>", "Macros"},
+        ["+"] = { ":lua require('telescope').extensions.neoclip.default()<cr>", "clipboard +" },
+        m = { ":lua require('telescope').extensions.macroscope.default()<cr>", "Macros" },
         M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
         r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
         R = { "<cmd>Telescope registers<cr>", "Registers" },
@@ -258,7 +264,7 @@ local mappings_n = {
         name = "Quit",
         q = { "<cmd>qa!<cr>", "close nvim" },
         s = { "<cmd>wqa! <cr>", "save and quit" },
-        b = { "<cmd>Bdelete<cr>", "close buffer" }
+        b = { "<cmd>Bdelete!<cr>", "close buffer" }
     },
 
 }
