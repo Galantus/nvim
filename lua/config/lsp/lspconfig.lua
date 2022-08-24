@@ -26,6 +26,7 @@ local servers = {
 	"rust_analyzer",
 	"sqls",
 	"bashls",
+    "pyright"
 }
 
 mason_lspconfig.setup({
