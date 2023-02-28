@@ -89,6 +89,10 @@ return packer.startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons' }, -- optional, for file icons
         config = [[require('config/plugins/nvim-tree') ]] })
 
+    use({'ms-jpq/chadtree',
+        config = [[require('config/plugins/chadtree')]],
+        run = "python -m chadtree deps"})
+
     -- Colorschemes
     use({ "Th3Whit3Wolf/space-nvim" })
     use({ "ray-x/aurora" })
